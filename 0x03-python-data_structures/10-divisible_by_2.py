@@ -1,7 +1,11 @@
 #!/usr/bin/python3
 def divisible_by_2(my_list=[]):
+    if my_list is None:
+        return None
     newlist = []
-    if my_list:
-        for i in my_list:
-            newlist.append(False if num % 2 else True)
-        return newlist
+    for i in my_list:
+        if (i % 2) == 0:
+            newlist.append(True)
+        else:
+            newlist.append(False)
+    return newlist
